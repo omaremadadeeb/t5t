@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GATE1</title>
+
+  <!-- Modern Arabic Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-bar">
+  <div class="brand">GATE1</div>
+  <div class="lang-switch">
+    <button onclick="setLang('ar')">AR</button>
+    <button onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1 data-ar="مو متجر" data-en="Not a store"></h1>
+  <p data-ar="بوابة ذوق" data-en="A gate for taste"></p>
+</section>
+
+<section class="category">
+  <h2 data-ar="Sweater" data-en="Sweater"></h2>
+  <div class="grid">
+    <div class="card" onclick="openLightbox(['images/sw1.jpg','images/sw2.jpg','images/sw1.jpg'])">
+      <img src="images/sw.jpg" />
+    </div>
+    <div class="card" onclick="openLightbox(['images/sw1.jpg','images/sw2.jpg','images/sw.jpg'])">
+      <img src="images/sw2.jpg" />
+    </div>
+    <div class="card" onclick="openLightbox(['images/11A.jpg','images/12s.jpg','images/بطل5.jpg'])">
+      <img src="images/blt.jpg" />
+    </div>
+  </div>
+</section>
+
+<section class="category">
+  <h2 data-ar="Hoodie" data-en="Hoodie"></h2>
+  <div class="grid">
+    <div class="card" onclick="openLightbox(['images/h2.jpg','images/h3.jpg','images/h4.jpg'])">
+      <img src="images/h1.jpg" />
+    </div>
+    <div class="card" onclick="openLightbox(['images/20s.jpg','images/20b.jpg','images/20c.jpg'])">
+      <img src="images/12s.jpg" />
+    </div>
+    <div class="card" onclick="openLightbox(['images/15.jpg','images/15b.jpg','images/15c.jpg'])">
+      <img src="images/11A.jpg" />
+    </div>
+  </div>
+</section>
+
+
+<section class="category">
+  <h2 data-ar="Street Fits" data-en="Street Fits"></h2>
+  <div class="grid">
+    <div class="card" onclick="openLightbox(['images/13.jpg','images/13b.jpg','images/13c.jpg'])">
+      <img src="images/blt3.jpg" />
+    </div>
+    <div class="card" onclick="openLightbox(['images/20s.jpg','images/20b.jpg','images/20c.jpg'])">
+      <img src="images/12s.jpg" />
+    </div>
+    <div class="card" onclick="openLightbox(['images/15.jpg','images/15b.jpg','images/15c.jpg'])">
+      <img src="images/11A.jpg" />
+    </div>
+  </div>
+</section>
+<section class="about">
+  <p data-ar="
+GATE1 مو متجر.  
+هو فلتر.  
+نختار، ما نكدّس.  
+إذا القطعة موجودة هنا،  
+فهي عدّت من البوابة.
+"
+data-en="
+GATE1 isn’t a store.  
+It’s a filter.  
+We select, not stack.  
+If it’s here,  
+it passed the gate.
+"></p>
+</section>
+
+<footer>
+  <a href="https://www.instagram.com/hayaliomr" target="_blank">
+    Follow the mood → @hayaliomr
+  </a>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="nav prev" onclick="event.stopPropagation(); prevImage()">❮</span>
+  <img src="" />
+  <span class="nav next" onclick="event.stopPropagation(); nextImage()">❯</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
